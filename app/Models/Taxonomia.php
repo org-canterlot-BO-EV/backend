@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Taxonomia extends Model
 {
-    /** @use HasFactory<\Database\Factories\TaxonomiaFactory> */
     use HasFactory;
+    protected $primaryKey = "taxonomia_id";
+
+    protected $fillable = [
+        'elnevezes'
+    ];
 }

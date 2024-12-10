@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Program extends Model
 {
-    /** @use HasFactory<\Database\Factories\ProgramFactory> */
     use HasFactory;
+    protected $primaryKey = "program_id";
+
+    protected $fillable = [
+        'program_nev',
+        'program_leiras',
+        'program_ar',
+        'program_datum',
+        'foglalas_kezdete',
+        'foglalas_vege',
+        'programtipus_id'
+    ];
 }

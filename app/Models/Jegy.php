@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jegy extends Model
 {
-    /** @use HasFactory<\Database\Factories\JegyFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'felhasznalo_nev',
+        'program_id',
+        'db'
+    ];
 }

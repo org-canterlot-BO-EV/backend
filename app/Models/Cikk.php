@@ -7,6 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cikk extends Model
 {
-    /** @use HasFactory<\Database\Factories\CikkFactory> */
     use HasFactory;
+    protected $primaryKey = "cikk_id";
+
+    protected $fillable = [
+        'cikk_nev',
+        'cikk_tartalom',
+        'felhasznalo_nev'
+    ];
 }

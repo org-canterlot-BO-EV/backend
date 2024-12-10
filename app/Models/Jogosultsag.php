@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jogosultsag extends Model
 {
-    /** @use HasFactory<\Database\Factories\JogosultsagFactory> */
     use HasFactory;
+    protected $primaryKey = "jogosultsag_tipus";
+
+    protected $fillable = [
+        'jogosultsag_tipus',
+        'elnevezes'
+    ];
 }

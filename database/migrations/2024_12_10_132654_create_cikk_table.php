@@ -12,12 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cikk', function (Blueprint $table) {
-            $table->integer('cikk_id')->primary();
+            $table->integer('cikk_id')->autoIncrement();
             $table->string('cikk_nev', 50);
             $table->longText('cikk_tartalom');
             $table->date('letrehozas_datuma')->getdate();
             $table->char('felhasznalo_nev', 25);
 
+
+            $table->primary('cikk_id');
             $table->foreign('felhasznalo_nev')->references('felhasznalo_nev')->on('felhasznalo');
         });
     }

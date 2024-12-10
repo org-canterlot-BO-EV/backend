@@ -9,8 +9,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('program_tipus', function (Blueprint $table) {
-            $table->integer('programtipus_id')->primary();
-            $table->string('program_id', 30)->unique();
+            $table->integer('programtipus_id')->autoIncrement();
+            $table->string('elnevezes', 30)->unique();
+
+            $table->primary('programtipus_id');
         });
     }
 

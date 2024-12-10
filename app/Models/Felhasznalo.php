@@ -7,6 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Felhasznalo extends Model
 {
-    /** @use HasFactory<\Database\Factories\FelhasznaloFactory> */
     use HasFactory;
+    protected $primaryKey = "felhasznalo_nev";
+
+    protected $fillable = [
+        'felhasznalo_nev',
+        'jelszo',
+        'vezetek_nev',
+        'kereszt_nev',
+        'szul_datum',
+        'telefon',
+        'email',
+        'jogosultsag_tipus'
+    ];
 }

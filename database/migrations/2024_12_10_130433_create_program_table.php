@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('program', function (Blueprint $table) {
-            $table->integer('program_id', 100)->primary();
+            $table->integer('program_id', 100)->autoIncrement();
             $table->string('program_nev', 50);
             $table->longText('program_leiras');
             $table->integer('program_ar');
@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('foglalas_vege');
             $table->integer('programtipus_id');
 
+            $table->primary('program_id');
             $table->foreign('programtipus_id')->references('programtipus_id')->on('program_tipus');
         });
     }

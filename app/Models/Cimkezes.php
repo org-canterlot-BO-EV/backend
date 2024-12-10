@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cimkezes extends Model
 {
-    /** @use HasFactory<\Database\Factories\CimkezesFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'program_id',
+        'taxonomia_id'
+    ];
 }
