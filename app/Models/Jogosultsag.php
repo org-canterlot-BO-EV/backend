@@ -9,7 +9,8 @@ class Jogosultsag extends Model
 {
     use HasFactory;
     protected $primaryKey = "jogosultsag_tipus";
-
+    public $timestamps = false;
+    
     protected $fillable = [
         'jogosultsag_tipus',
         'elnevezes'

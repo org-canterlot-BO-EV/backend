@@ -20,7 +20,7 @@ return new class extends Migration
 
 
             $table->primary('cikk_id');
-            $table->foreign('felhasznalo_nev')->references('felhasznalo_nev')->on('felhasznalo');
+            $table->foreign('felhasznalo_nev')->references('felhasznalo_nev')->on('felhasznalos');
         });
     }
 

@@ -4,11 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 
 class Felhasznalo extends Model
 {
     use HasFactory;
     protected $primaryKey = "felhasznalo_nev";
+    public $timestamps = false;
 
     protected $fillable = [
         'felhasznalo_nev',
