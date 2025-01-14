@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FelhasznaloController;
 use App\Http\Controllers\JegyController;
 use App\Http\Controllers\JogosultsagController;
 use App\Http\Controllers\ProgramController;
@@ -51,17 +52,12 @@ Route::get('/osszes-foglalas-adott-programra/{program_id}', [JegyController::cla
 
 //kislistázza azon felhasználókat, akiknek a kommentjei több mint ötször lettek törölté állítva
 
-//kilistázza az összes moderátor felhasználót
-
-//kilistázza az összes sima felhasználót
-
 //adott felhasználónevű userre keres 
 
-//kilistázza az összes publikáló felhazsnálót
-
-
+//kilistázza az összes adott jogoultsaggal rendelkezo felhazsnálót
+Route::get('/felhasznalok-jogosultsag-szerint/{jogosultsag_tipus}', [FelhasznaloController::class, 'adottJogosultsagu']);
 //Cikkekre vonatkozó lekérdezések:
 
 //visszaadja az összes cikket
 
-//
+//iro szerinti keresés a cikkek között
