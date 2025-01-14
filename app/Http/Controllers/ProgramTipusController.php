@@ -7,5 +7,7 @@ use Illuminate\Http\Request;
 
 class ProgramTipusController extends Controller
 {
-    
+    public function mindenProgramTipus(){
+        return Program_tipus::all();
+    }
 }
