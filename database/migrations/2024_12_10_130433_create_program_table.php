@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('programtipus_id');
 
             $table->primary('program_id');
-            $table->foreign('programtipus_id')->references('programtipus_id')->on('program_tipus');
+            $table->foreign('programtipus_id')->references('programtipus_id')->on('program_tipuses');
         });
     }
 

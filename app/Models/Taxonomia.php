@@ -9,7 +9,8 @@ class Taxonomia extends Model
 {
     use HasFactory;
     protected $primaryKey = "taxonomia_id";
-
+    public $timestamps = false;
+    
     protected $fillable = [
         'elnevezes'
     ];
