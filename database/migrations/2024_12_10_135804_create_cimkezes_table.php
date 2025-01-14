@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('taxonomia_id');
 
             $table->primary(['program_id', 'taxonomia_id']);
-            $table->foreign('program_id')->references('program_id')->on('program');
+            $table->foreign('program_id')->references('program_id')->on('programs');
             $table->foreign('taxonomia_id')->references('taxonomia_id')->on('taxonomias');
         });
     }

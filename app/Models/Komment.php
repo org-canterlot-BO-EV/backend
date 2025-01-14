@@ -9,6 +9,7 @@ class Komment extends Model
 {
     use HasFactory;
     protected $primaryKey = "komment_id";
+    public $timestamps = false;
 
     protected $fillable = [
         'komment_tartalom',

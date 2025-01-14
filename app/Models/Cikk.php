@@ -9,6 +9,7 @@ class Cikk extends Model
 {
     use HasFactory;
     protected $primaryKey = "cikk_id";
+    public $timestamps = false;
 
     protected $fillable = [
         'cikk_nev',

@@ -15,4 +15,6 @@ class Jogosultsag extends Model
         'jogosultsag_tipus',
         'elnevezes'
     ];
+
+    
 }

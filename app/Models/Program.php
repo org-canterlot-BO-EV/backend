@@ -9,6 +9,7 @@ class Program extends Model
 {
     use HasFactory;
     protected $primaryKey = "program_id";
+    public $timestamps = false;
 
     protected $fillable = [
         'program_nev',

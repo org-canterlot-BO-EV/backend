@@ -21,7 +21,7 @@ return new class extends Migration
             $table->char('felhasznalo_nev', 25);
 
             $table->primary('komment_id');
-            $table->foreign('cikk_id')->references('cikk_id')->on('cikk');
+            $table->foreign('cikk_id')->references('cikk_id')->on('cikks');
             $table->foreign('felhasznalo_nev')->references('felhasznalo_nev')->on('felhasznalos');
         });
     }
