@@ -23,10 +23,9 @@ class JogosultsagController extends Controller
 
         public function show($jogosultsag_tipus)
         {
-            $lending = Jogosultsag::where('jogosultsag_tipus', $jogosultsag_tipus)
-            //listát ad vissza:
+            $adat = Jogosultsag::where('jogosultsag_tipus', $jogosultsag_tipus)
             ->get();
-            return $lending[0];
+            return $adat[0];
         }
 
         public function patchJogosultsag(Request $request, $jogosultsag_tipus){
