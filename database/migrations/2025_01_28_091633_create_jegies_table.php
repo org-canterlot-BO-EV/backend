@@ -15,7 +15,7 @@ return new class extends Migration
             $table->integer('db');
 
             $table->primary(['felhasznalo_nev', 'program_id']);
-            $table->foreign('felhasznalo_nev')->references('felhasznalo_nev')->on('felhasznalos');
+            $table->foreign('felhasznalo_nev')->references('felhasznalo_nev')->on('users');
             $table->foreign('program_id')->references('program_id')->on('programs');
         });
 
