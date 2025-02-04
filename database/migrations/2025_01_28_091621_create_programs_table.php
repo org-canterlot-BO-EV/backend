@@ -35,6 +35,16 @@ return new class extends Migration
             'foglalas_vege'=>'20250201',
             'programtipus_id'=>'2',
         ]);
+
+        Program::create([
+            'program_nev'=>'Muffin kostoló',
+            'program_leiras'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis metus sit amet libero finibus, fringilla tempor sapien tincidunt. Fusce sed rutrum diam. Nunc vulputate urna vel scelerisque lacinia. Integer viverra felis nisi, vel ultricies felis aliquam nec. Donec nibh quam, pretium lacinia nunc eu, facilisis auctor augue. Proin tempus facilisis iaculis. Pellentesque ullamcorper ut erat elementum posuere. Nulla ut justo eget nulla aliquam dignissim sed vel erat. Maecenas a tincidunt metus. Sed fringilla quam sit amet mi dictum, nec porttitor neque lacinia. Integer orci elit, iaculis a mauris ac, viverra vehicula dui. In suscipit bibendum purus. Duis finibus volutpat auctor.',
+            'program_ar'=>'1500',
+            'program_datum'=>'20250125',
+            'foglalas_kezdete'=>'20250108',
+            'foglalas_vege'=>'20250124',
+            'programtipus_id'=>'2',
+        ]);
     }
 
     /**
