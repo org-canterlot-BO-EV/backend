@@ -11,8 +11,12 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/csrf-token', function () {
+    return response()->json(['csrf_token' => csrf_token()]);
+});
+
 Route::get('/programtipusok', [ProgramTipusController::class, "mindenProgramTipus"]);
 Route::get('/felhasznalok', [UserController::class, "mindenFelhasznalo"]);
 Route::get('/programok', [ProgramController::class, "mindenProgram"]);
-Route::post('/program-hozzadasa', [UserController::class, "store"]);
+Route::post('/program-hozzadasa', [ProgramController::class, "store"]);
 Route::get('/mindentaxonomia', [TaxonomiaController::class, "mindenTaxonomia"]);
